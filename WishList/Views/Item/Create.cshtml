@@ -1,8 +1,16 @@
-﻿@model List<WishList.Models.Item>
+﻿@model WishList.Models.Item
 
-<h1>Wishlist</h1>
+<h3>Wishlist</h3>
 
-<a asp-action="create">Add item</a>
+<a asp-action="create">Add item to wishlist</a>
+
+<form asp-action="create">
+    <input asp-for="Description" />
+    <span asp-validation-for="Description"></span>
+    <button type="submit">Add Item</button>
+
+
+</form>
 
 <ul>
     @foreach (var item in Model)
