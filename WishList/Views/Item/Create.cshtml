@@ -11,10 +11,3 @@
 
 
 </form>
-
-<ul>
-    @foreach (var item in Model)
-    {
-        <li>@item.Description <a asp-action="delete" asp-route-id="Id">Delete</a></li>
-    }
-</ul>
